@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merité Restaurant - Меню</title>
+    <link rel="stylesheet" href="menustyles.css">
+    <script defer src="menuanimations.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="mainpage.html"><img src="Images/IMG_7660.PNG" alt="MERITÉ"></a>
+        </div>
+        <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="mainpage.html" class="nav-link"><b>Главная</b></a></li>
+                <li><a href="menupage.html" class="nav-link active"><b>Меню</b></a></li>
+                <li><a href="restmap.html" class="nav-link"><b>Рестораны</b></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="main-title">Меню</h1>
+        
+        <section class="slider">
+            <div class="slider-container">
+                <div class="slider-section section-1">
+                    <img src="Images/menu1.jpg" class="slider-img" alt="Блюдо 1">
+                </div>
+                <div class="slider-section section-2">
+                    <img src="Images/menu2.jpg" class="slider-img" alt="Блюдо 2">
+                </div>
+                <div class="slider-section section-3">
+                    <img src="Images/menu3.jpg" class="slider-img" alt="Блюдо 3">
+                </div>
+            </div>
+            <div class="slider-nav">
+                <div class="slider-nav-left"></div>
+                <div class="slider-nav-right"></div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2 class="section-title">Завтрак</h2>
+            <div class="menu-container">
+                <div class="menu-img"><img src="Images/menu.jpg" alt="Завтраки"></div>
+                <div class="menu-content">
+                    <div class="menu-items-columns">
+                        <div class="menu-items-col">
+                            <div class="menu-item">
+                                <span class="item-name">Классический Цезарь</span>
+                                <span class="dots"></span>
+                                <span class="item-price">15</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Луковый суп</span>
+                                <span class="dots"></span>
+                                <span class="item-price">25</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Буйабес</span>
+                                <span class="dots"></span>
+                                <span class="item-price">30</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Пашот с тартаром</span>
+                                <span class="dots"></span>
+                                <span class="item-price">35</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Лосось на пару</span>
+                                <span class="dots"></span>
+                                <span class="item-price">20</span>
+                            </div>
+                        </div>
+                        <div class="menu-items-col">
+                            <div class="menu-item">
+                                <span class="item-name">Омлет с сыром</span>
+                                <span class="dots"></span>
+                                <span class="item-price">18</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Блины с творогом</span>
+                                <span class="dots"></span>
+                                <span class="item-price">16</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Сырники со сметаной</span>
+                                <span class="dots"></span>
+                                <span class="item-price">17</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Каша овсяная</span>
+                                <span class="dots"></span>
+                                <span class="item-price">12</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Тост с авокадо</span>
+                                <span class="dots"></span>
+                                <span class="item-price">19</span>
+                            </div>
+                        </div>
+                        <div class="menu-items-col">
+                            <div class="menu-item">
+                                <span class="item-name">Яичница с беконом</span>
+                                <span class="dots"></span>
+                                <span class="item-price">21</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Гречневая каша</span>
+                                <span class="dots"></span>
+                                <span class="item-price">13</span>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <span class="item-name">Творожная запеканка</span>
+                                <span class="dots"></span>
+                                <span class="item-price">18</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Фруктовый салат</span>
+                                <span class="dots"></span>
+                                <span class="item-price">15</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2 class="section-title expandable">Напитки</h2>
+            <div class="menu-container">
+                <div class="menu-img" style="display:none;"><img src="Images/tea.jpg" alt="Напитки"></div>
+                <div class="menu-content">
+                    <div class="menu-items-columns drinks-menu">
+                        <div class="menu-items-col">
+                            <div class="menu-item">
+                                <span class="item-name">Сок (Rich)</span>
+                                <span class="dots"></span>
+                                <span class="item-price">5</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Газировки (Coca-Cola, Fanta, Sprite)</span>
+                                <span class="dots"></span>
+                                <span class="item-price">5</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Вода минеральная</span>
+                                <span class="dots"></span>
+                                <span class="item-price">4</span>
+                            </div>
+                        </div>
+                        <div class="menu-items-col">
+                            <div class="menu-item">
+                                <span class="item-name">Американо</span>
+                                <span class="dots"></span>
+                                <span class="item-price">5</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Капучино</span>
+                                <span class="dots"></span>
+                                <span class="item-price">7</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Эспрессо</span>
+                                <span class="dots"></span>
+                                <span class="item-price">4</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Латте</span>
+                                <span class="dots"></span>
+                                <span class="item-price">8</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Раф</span>
+                                <span class="dots"></span>
+                                <span class="item-price">9</span>
+                            </div>
+                        </div>
+                        <div class="menu-items-col">
+                            <div class="menu-item">
+                                <span class="item-name">Чай в ассортименте (черный, зелёный)</span>
+                                <span class="dots"></span>
+                                <span class="item-price">5</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Чай с лимоном</span>
+                                <span class="dots"></span>
+                                <span class="item-price">6</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Чай с мятой</span>
+                                <span class="dots"></span>
+                                <span class="item-price">6</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Какао</span>
+                                <span class="dots"></span>
+                                <span class="item-price">7</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Горячий шоколад</span>
+                                <span class="dots"></span>
+                                <span class="item-price">8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2 class="section-title expandable">Спиртные напитки</h2>
+            <div class="menu-container">
+                <div class="menu-img" style="display:none;"><img src="Images/alcdrinks.jpg" alt="Спиртные напитки"></div>
+                <div class="menu-content">
+                    <div class="menu-items-columns alcohol-menu">
+                        <div class="menu-items-col">
+                            <div class="menu-item">
+                                <span class="item-name">Вино красное</span>
+                                <span class="dots"></span>
+                                <span class="item-price">12</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Вино белое</span>
+                                <span class="dots"></span>
+                                <span class="item-price">12</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Десертное вино</span>
+                                <span class="dots"></span>
+                                <span class="item-price">14</span>
+                            </div>
+                        </div>
+                        <div class="menu-items-col">
+                            <div class="menu-item">
+                                <span class="item-name">Пиво (светлое, тёмное)</span>
+                                <span class="dots"></span>
+                                <span class="item-price">8</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Медовуха</span>
+                                <span class="dots"></span>
+                                <span class="item-price">9</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Сидр яблочный</span>
+                                <span class="dots"></span>
+                                <span class="item-price">9</span>
+                            </div>
+                        </div>
+                        <div class="menu-items-col">
+                            <div class="menu-item">
+                                <span class="item-name">Виски</span>
+                                <span class="dots"></span>
+                                <span class="item-price">15</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Ром</span>
+                                <span class="dots"></span>
+                                <span class="item-price">13</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Текила</span>
+                                <span class="dots"></span>
+                                <span class="item-price">14</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Джин</span>
+                                <span class="dots"></span>
+                                <span class="item-price">13</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="Images/IMG_7660.PNG" alt="MERITÉ">
+        </div>
+        <div class="footer-contacts">
+            <div class="contact-item">
+                <img src="Images/TelephoneLogo.PNG" alt="Телефон">
+                <span>+375 (29) 123-45-67</span>
+            </div>
+            <div class="contact-item">
+                <img src="Images/MailLogos.PNG" alt="Почта">
+                <span>meriterest@gmail.com</span>
+            </div>
+            <div class="contact-item-instagram">
+                <img src="Images/InstagramLogo.png" alt="Instagram">
+                <span>@merite_restaurant</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

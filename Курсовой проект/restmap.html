@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merité Restaurant - Карта ресторанов</title>
+    <link rel="stylesheet" href="restmap.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="mainpage.html"><img src="Images/IMG_7660.PNG" alt="MERITÉ"></a>
+        </div>
+        <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="mainpage.html" class="nav-link"><b>Главная</b></a></li>
+                <li><a href="menupage.html" class="nav-link"><b>Меню</b></a></li>
+                <li><a href="restmap.html" class="nav-link active"><b>Рестораны</b></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="main-title">Рестораны</h1>
+        <div class="map-flex-container">
+            <div class="map-container">
+                <img src="Images/mapofMinsk.png" alt="Карта Минска" class="map-image">
+                <!-- Точка 1: ул. Кирова, 19 -->
+                <div class="point" style="left: 51%; top: 57%;" data-address="Ул. Кирова, 19" data-href="kirova"></div>
+                <!-- Точка 2: ТРЦ Галерея -->
+                <div class="point" style="left: 47%; top: 44%;" data-address="Проспект Победителей 9 (ТРЦ Галерея)" data-href="gallery"></div>
+                <!-- Точка 3: ТРЦ Галилео -->
+                <div class="point" style="left: 50%; top: 64%;" data-address="Улица Бобруйская 6 (ТРЦ Галилео)" data-href="galileo"></div>
+            </div>
+            <div class="addresses-list">
+                <div class="address-item" data-href="kirova">Минск, ул. Кирова, 19</div>
+                <div class="address-item" data-href="gallery">Минск, Проспект Победителей 9 (ТРЦ Галерея)</div>
+                <div class="address-item" data-href="galileo">Минск, Улица Бобруйская 6 (ТРЦ Галилео)</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="Images/IMG_7660.PNG" alt="MERITÉ">
+        </div>
+        <div class="footer-contacts">
+            <div class="contact-item">
+                <img src="Images/TelephoneLogo.PNG" alt="Телефон">
+                <span>+375 (29) 123-45-67</span>
+            </div>
+            <div class="contact-item">
+                <img src="Images/MailLogos.PNG" alt="Почта">
+                <span>meriterest@gmail.com</span>
+            </div>
+            <div class="contact-item-instagram">
+                <img src="Images/InstagramLogo.png" alt="Instagram">
+                <span>@merite_restaurant</span>
+            </div>
+        </div>
+    </footer>
+    <script src="restmap.js"></script>
+</body>
+</html>

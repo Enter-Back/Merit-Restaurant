@@ -1,0 +1,624 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f6d197, #e0ae5e);
+    text-align: center;
+}
+main {
+    margin-top: 200px;
+}
+/* Улучшения для заголовков и текста */
+.about-title, .cuisine-title, .interior-title {
+    color: #111;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.about-text p.left, .cuisine p.left, .about-interior p.left {
+    text-align: left;
+    font-family: 'Cascadia Mono', serif;
+}
+
+.about-text h2, .cuisine h2, .interior h2 {
+    color: #000000;
+    font-family: 'Century Gothic', serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.about-text p, .cuisine p, .about-interior p {
+    color: #3d2c13;
+    line-height: 1.6;
+}
+
+.about-img img, .interior-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #e6ba72;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 100px;
+    width: 115px;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.burger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-size: 28px;
+    font-family: 'Century Gothic', sans-serif;
+    position: relative;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 4px;
+    background-color: black;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    nav {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: #e6ba72;
+        padding: 20px;
+        transition: top 0.3s ease;
+        z-index: 99;
+    }
+
+    nav.active {
+        top: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .nav-link {
+        font-size: 24px;
+    }
+
+    .burger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    /* Предотвращаем прокрутку при открытом меню */
+    body.menu-open {
+        overflow: hidden;
+    }
+}
+
+/* Главный заголовок */
+.main-title {
+    font-size: 36px;
+    margin: 30px 0 10px 0;
+    letter-spacing: 2px;
+    color: #000000;
+    font-family: 'Century Gothic', serif;
+}
+
+/* Слайдер */
+.slider {
+    width: 100%;
+    height: 350px;
+    margin: 30px auto 40px auto;
+    position: relative;
+    overflow: hidden;
+    background: #e1c198;
+}
+
+.slider-container {
+    width: 300%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-section {
+    width: 33.333%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Навигация слайдера */
+.slider-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 2;
+}
+
+.slider-nav-left,
+.slider-nav-right {
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 700px) {
+    .slider {
+        height: 200px;
+    }
+}
+
+/* О ресторане */
+.about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.about .about-img img {
+    width: 60vw;
+    max-width: 800px;
+    height: 50vh;
+    object-fit: cover;
+    position: relative;
+    border-radius: 15px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 1s cubic-bezier(0.4,0,0.2,1), opacity 0.7s;
+}
+
+.about .about-img img.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.about-text {
+    width: 40%;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.7s, transform 1s cubic-bezier(0.4,0,0.2,1);
+}
+
+.about-text.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Стили для секции интерьера */
+.interior {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.interior-image {
+    width: 60vw;
+    max-width: 800px;
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.interior-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s cubic-bezier(0.4,0,0.2,1), opacity 0.7s;
+}
+
+.interior-image img.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.about-interior {
+    width: 40%;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.7s, transform 1s cubic-bezier(0.4,0,0.2,1);
+}
+
+.about-interior.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* О кухне */
+.cuisine {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    background: transparent;
+}
+
+.cuisine-text {
+    width: 40%;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.7s, transform 1s cubic-bezier(0.4,0,0.2,1);
+}
+
+.cuisine-text.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media screen and (min-width: 469px) {
+    .about {
+        flex-direction: row;
+    }
+
+    .interior {
+        flex-direction: row;
+    }
+
+    .cuisine {
+        flex-direction: row-reverse;
+    }
+
+    .about-text, .about-interior, .cuisine-text {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .about {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .about .about-img img, .interior .interior-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .interior {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .interior .interior-image {
+        width: 100%;
+        height: 300px;
+    }
+
+    .about-interior {
+        width: 100%;
+    }
+
+    .cuisine {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+        background: transparent;
+    }
+
+    .cuisine-text {
+        width: 100%;
+    }
+}
+
+/* Картинки-переключатели */
+.slider img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.slider .prev {
+    left: 10px;
+}
+
+.slider .next {
+    right: 10px;
+}
+
+@media (max-width: 700px) {
+    .slider {
+        height: 200px;
+    }
+    .about {
+        flex-direction: column-reverse;
+        padding: 20px;
+        gap: 20px;
+    }
+    .about-img img {
+        width: 90vw;
+        max-width: 300px;
+    }
+    .about-title, .cuisine-title, .interior-title {
+        font-size: 24px;
+    }
+    .about-text {
+        width: 90%;
+    }
+    .cuisine {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .cuisine-text {
+        width: 90%;
+    }
+    
+    .dishes-slider {
+        width: 90%;
+        height: 250px;
+    }
+    
+    .interior {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .interior-image {
+        width: 90vw;
+        max-width: 300px;
+    }
+    
+    .about-interior {
+        width: 90%;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-contacts {
+        width: 100%;
+        align-items: center;
+    }
+    
+    .slide-arrow img {
+        width: 30px;
+        height: 30px;
+    }
+}
+/* Стили для слайдера с блюдами */
+.dishes-slider {
+    width: 60%;
+    max-width: 800px;
+    height: 400px;
+    background: transparent;
+    border-radius: 15px;
+    overflow: hidden;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 1s cubic-bezier(0.4,0,0.2,1), opacity 0.7s;
+}
+
+.dishes-slider.visible {
+    transform: translateX(0);
+    opacity: 1;
+    background: transparent;
+}
+
+.dishes-slider-container {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.dish-slide {
+    position: relative;
+    flex: 0 0 calc(50% - 10px);
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background: transparent;
+}
+
+.dish-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.dish-slide img.slide-right {
+    transform: translateX(100%);
+}
+
+.dish-slide img.slide-left {
+    transform: translateX(-100%);
+}
+
+.dish-slide img.slide-center {
+    transform: translateX(0);
+}
+
+.slide-arrow {
+    position: absolute;
+    bottom: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2;
+    transition: transform 0.3s;
+}
+
+.slide-arrow:hover {
+    transform: scale(1.1);
+}
+
+.slide-arrow.prev {
+    left: 20px;
+}
+
+.slide-arrow.next {
+    right: 20px;
+}
+
+.slide-arrow img {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+@media (max-width: 700px) {
+    .slide-arrow img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Футер */
+footer {
+    background: #cb8c28;
+    padding: 20px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    height: 100px;
+    width: 115px;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item, .contact-item-instagram {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-item-instagram img {
+    width: 40px;
+    height: 30px;
+    margin-left: -5px;
+}
+
+.contact-item span, .contact-item-instagram span {
+    color: #000;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-social img {
+    width: 30px;
+}
